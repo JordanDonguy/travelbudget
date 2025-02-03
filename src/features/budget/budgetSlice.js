@@ -18,6 +18,7 @@ export const budgetSlice = createSlice({
     }
 });
 
-export const selectBudget = (state) => state.budget;
+export const selectBudget = (state) => state.budget.budget;
+export const selectDays = (state) => state.budget.days;
 export const {editBudget, editDays} = budgetSlice.actions;
 export default budgetSlice.reducer;

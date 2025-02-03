@@ -9,12 +9,12 @@ export default function Budget() {
     const [days, setDays] = useState('');
 
     function handleBudgetChange (e) {
-        setAmount(e.target.value);
+        setAmount(e.currentTarget.value);
         dispatch(editBudget({amount: amount}));
     }
 
     function handleDaysChange (e) {
-        setDays(e.target.value);
+        setDays(e.currentTarget.value);
         dispatch(editDays({days: days}))
     }
 

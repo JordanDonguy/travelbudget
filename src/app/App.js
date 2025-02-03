@@ -4,11 +4,15 @@ import {
   BrowserRouter,
   Routes
 } from "react-router-dom";
+import Budget from "../features/budget/budget";
 
-export default function App () {
+export default function App() {
   return (
-    <BrowserRouter>
-
-    </BrowserRouter>
-  )
+    <div className="App">
+      <header className="App-header">
+        <h1>Travel Budget</h1>
+      </header>
+      <Budget />
+    </div>
+  );
 };

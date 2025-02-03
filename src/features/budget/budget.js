@@ -10,12 +10,12 @@ export default function Budget() {
 
     function handleBudgetChange (e) {
         setAmount(e.currentTarget.value);
-        dispatch(editBudget({amount: amount}));
+        dispatch(editBudget({amount: e.currentTarget.value}));
     }
 
     function handleDaysChange (e) {
         setDays(e.currentTarget.value);
-        dispatch(editDays({days: days}))
+        dispatch(editDays({days: e.currentTarget.value}))
     }
 
     return (

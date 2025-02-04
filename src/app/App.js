@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Budget from "../features/budget/budget";
 import AddExpenseForm from "../features/expenses/addExpenseForm/addExpenseForm";
+import ExpensesList from "../features/expenses/expensesList/expensesList";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       </header>
       <Budget />
       <AddExpenseForm />
+      <ExpensesList />
     </div>
   );
 };

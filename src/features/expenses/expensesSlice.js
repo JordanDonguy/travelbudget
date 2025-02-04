@@ -13,5 +13,6 @@ export const expensesSlice = createSlice({
     }
 });
 
+export const selectExpenses = (state) => state.expenses;
 export const {addExpense} = expensesSlice.actions;
 export default expensesSlice.reducer;

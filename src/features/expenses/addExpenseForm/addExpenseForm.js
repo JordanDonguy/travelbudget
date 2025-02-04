@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import react, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectDays } from "../../budget/budgetSlice";
 import styles from './addExpenseForm.module.css';
@@ -29,6 +29,14 @@ export default function AddExpenseForm() {
             setTotal(amount)
         }
     }
+
+    useEffect(() => {
+        if (type === "Daily") {
+            setTotal(amount * days)
+        } else {
+            setTotal(amount)
+        }
+    }, [days]);
 
     function handleSubmit(e) {
         e.preventDefault();

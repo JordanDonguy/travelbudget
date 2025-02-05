@@ -22,8 +22,7 @@ export default function Budget() {
 
     return (
         <div className={styles.budget}>
-            <div>
-                <span>Budget (€) :</span>
+            <label className={styles.bloc}>Budget (€) :
                 <input
                 type="number"
                 step="0.1"
@@ -31,9 +30,8 @@ export default function Budget() {
                 onChange={handleBudgetChange}
                 className={styles.input}
                 />
-            </div>
-            <div>
-                <span>Trip length (days) :</span>
+            </label>
+            <label className={styles.bloc}>Trip length (days) :
                 <input
                 type="number"
                 step="1"
@@ -41,7 +39,7 @@ export default function Budget() {
                 onChange={handleDaysChange}
                 className={styles.input}
                 />
-            </div>
+            </label>
         </div>
     )
 }

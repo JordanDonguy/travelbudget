@@ -1,0 +1,14 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(14, 119, 199);
+    font-size: 1.3rem;
+    width: 100%;
+  }

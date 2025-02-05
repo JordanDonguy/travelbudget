@@ -15,7 +15,7 @@ export default function AddExpenseForm() {
     function handleAmountChange(e) {
         setAmount(e.currentTarget.value);
         if (type === 'Daily') {
-            setTotal(e.currentTarget.value * days)
+            setTotal(Math.round(e.currentTarget.value * days * 100) / 100)
         } else {
             setTotal(e.currentTarget.value)
         }
@@ -24,7 +24,7 @@ export default function AddExpenseForm() {
     function handleTypeChange(e) {
         setType(e.currentTarget.value);
         if (e.currentTarget.value === "Daily") {
-            setTotal(amount * days)
+            setTotal(Math.round(amount * days * 100) / 100)
         } else {
             setTotal(amount)
         }
@@ -32,7 +32,7 @@ export default function AddExpenseForm() {
 
     useEffect(() => {
         if (type === "Daily") {
-            setTotal(amount * days)
+            setTotal(Math.round(amount * days * 100) / 100)
         } else {
             setTotal(amount)
         }
@@ -56,7 +56,7 @@ export default function AddExpenseForm() {
     return (
         <div >
             <form onSubmit={handleSubmit} className={styles['expense-form']}>
-                <label>Name :
+                <label>Description :
                     <input 
                     id="name"
                     type="text"
@@ -83,7 +83,7 @@ export default function AddExpenseForm() {
                         <option key="b" value="One-time">One-time</option>
                     </select>
                 </label>
-                <label>Total : <span  className={styles.total}>{total} €</span></label>
+                <label className={styles['total-bloc']}>Total : <span  className={styles.total}>{total} €</span></label>
                 <button className={styles.button}>Add expense</button>
             </form>
         </div>

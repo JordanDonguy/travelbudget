@@ -20,7 +20,7 @@ export const expensesSlice = createSlice({
             const { days } = action.payload;
             const oneTime = state.filter((expense) => expense.type === 'One-time');
             const daily = state.filter((expense) => expense.type === 'Daily');
-            const updateDaily = daily.map((expense) => expense.total = expense.amount * days);
+            const updateDaily = daily.map((expense) => expense.total = Math.round((expense.amount * days) * 100) / 100);
             state = oneTime.concat(updateDaily);
         }
     }

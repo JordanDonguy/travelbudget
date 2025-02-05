@@ -25,7 +25,7 @@ export default function Budget() {
             <label className={styles.bloc}>Budget (€) :
                 <input
                 type="number"
-                step="0.1"
+                step="10"
                 value={amount}
                 onChange={handleBudgetChange}
                 className={styles.input}

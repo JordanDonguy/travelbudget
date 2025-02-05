@@ -1,8 +1,10 @@
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    background-color: aliceblue;
+    min-height: 100vh;
 }
 
 .app header {

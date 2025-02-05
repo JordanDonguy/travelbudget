@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editBudget, editDays } from "./budgetSlice";
+import { editTotal } from "../expenses/expensesSlice";
 import styles from "./budget.module.css";
 
 export default function Budget() {
@@ -16,6 +17,7 @@ export default function Budget() {
     function handleDaysChange (e) {
         setDays(e.currentTarget.value);
         dispatch(editDays({days: e.currentTarget.value}))
+        dispatch(editTotal({days: e.currentTarget.value}));
     }
 
     return (

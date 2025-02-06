@@ -12,8 +12,7 @@ export const expensesSlice = createSlice({
         },
         removeExpense: (state, action) => {
             const { id } = action.payload;
-            const expenseId = Number(id)
-            state = state.filter((expense) => expense.id !== expenseId)
+            state = state.filter((expense) => expense.id !== id)
             return state
         },
         editTotal: (state, action) => {

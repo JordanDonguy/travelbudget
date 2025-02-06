@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid'; 
 import { useSelector, useDispatch } from "react-redux";
 import { selectDays } from "../../budget/budgetSlice";
 import styles from './addExpenseForm.module.css';
@@ -39,8 +40,8 @@ export default function AddExpenseForm() {
     }, [days]);
 
     function handleSubmit(e) {
-        e.preventDefault();
-        let id = Math.floor(Math.random() * 1000)
+        e.preventDefault(); 
+        let id = uuidv4();
         dispatch(addExpense({
             id: id,
             name: name,

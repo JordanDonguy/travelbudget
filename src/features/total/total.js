@@ -12,7 +12,6 @@ const Total = () => {
     const totalExpenses = expensesAmounts.reduce((a,b) => a + b, 0);
     const budget = useSelector(selectBudget);
     const moneyLeft = (Math.round((budget.amount - totalExpenses) * 100)) / 100;
-    console.log(expenses)
 
   return (
     <div className={styles.total}>

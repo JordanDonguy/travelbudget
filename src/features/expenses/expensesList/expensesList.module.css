@@ -1,7 +1,7 @@
 .expensesList {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 1.2rem;
 }
 
@@ -9,11 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55vw;
+    width: 800px;
     border: 1px solid black;
     border-radius: 5px;
     margin: 20px;
-
+    padding: 10px 0px;
 }
 
 .name, .type, .amount, .total {
@@ -26,9 +26,22 @@
     border: none;
     background-color: transparent;
     font-size: 2rem;
+    padding-bottom: 5px;
 }
 
 .x:hover {
     cursor: pointer;
     color:brown;
+}
+
+@media only screen and (max-width: 900px) {
+    .expense{
+        width: 95vw
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .expense{
+        font-size: 1rem;
+    }
 }

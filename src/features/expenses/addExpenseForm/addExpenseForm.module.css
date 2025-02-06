@@ -4,7 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(212, 233, 253);
-    width: 55vw;
+    width: 800px;
     margin: 0px 22.5vw;
     border-radius: 10px;
     font-size: 1.2rem;
@@ -17,6 +17,7 @@
     border-radius: 5px;
     text-align: center;
     font-size: 1.2rem;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .total-bloc{
@@ -43,4 +44,16 @@
 
 .button:active {
     background-color: rgb(206, 205, 205);
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .expense-form{
+        width: 95vw
+    }
+
+    .button{
+        margin: 10px;
+    }
 }

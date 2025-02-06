@@ -8,11 +8,9 @@ export const budgetSlice = createSlice({
     },
     reducers: {
         editBudget: (state, action) => {
-            const { amount } = action.payload;
             state.budget = action.payload
         },
         editDays: (state, action) => {
-            const { days } = action.payload;
             state.days = action.payload;
         }
     }

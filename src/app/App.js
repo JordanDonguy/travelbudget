@@ -1,9 +1,4 @@
 import React from "react";
-import {
-  Route,
-  BrowserRouter,
-  Routes
-} from "react-router-dom";
 import styles from './App.module.css';
 import Budget from "../features/budget/budget";
 import AddExpenseForm from "../features/expenses/addExpenseForm/addExpenseForm";

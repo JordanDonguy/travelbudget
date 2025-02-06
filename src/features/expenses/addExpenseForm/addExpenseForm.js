@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid'; 
 import { useSelector, useDispatch } from "react-redux";
 import { selectDays } from "../../budget/budgetSlice";
@@ -37,7 +37,7 @@ export default function AddExpenseForm() {
         } else {
             setTotal(amount)
         }
-    }, [days]);
+    }, [days, type, amount]);
 
     function handleSubmit(e) {
         e.preventDefault(); 

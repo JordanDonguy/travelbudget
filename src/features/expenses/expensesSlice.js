@@ -21,10 +21,13 @@ export const expensesSlice = createSlice({
             const daily = state.filter((expense) => expense.type === 'Daily');
             const updateDaily = daily.map((expense) => expense.total = Math.round((expense.amount * days) * 100) / 100);
             state = oneTime.concat(updateDaily);
+        },
+        sortExpenses: (state, action) => {
+            state = state.sort((a, b) => b.total - a.total)
         }
     }
 });
 
 export const selectExpenses = (state) => state.expenses;
-export const {addExpense, removeExpense, editTotal} = expensesSlice.actions;
+export const {addExpense, removeExpense, editTotal, sortExpenses} = expensesSlice.actions;
 export default expensesSlice.reducer;

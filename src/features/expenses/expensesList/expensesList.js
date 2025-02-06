@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectExpenses } from '../expensesSlice';
 import styles from './expensesList.module.css';
-import { removeExpense } from '../expensesSlice';
+import { removeExpense, sortExpenses } from '../expensesSlice';
 
 const ExpensesList = () => {
     const expenses = useSelector(selectExpenses);
@@ -11,6 +11,10 @@ const ExpensesList = () => {
     const handleOnClick = (e) => {
         dispatch(removeExpense({id: e.currentTarget.id}));
     }
+
+    useEffect(() => {
+        dispatch(sortExpenses());
+    })
 
     const renderedExpenses = expenses.map(expense => (
         <article key={expense.id}  className={styles.expense}>

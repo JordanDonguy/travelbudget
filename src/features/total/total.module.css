@@ -26,3 +26,17 @@
         margin: 10px 20px;
     }
 }
+
+@media only screen and (max-width: 410px) {
+    .total {
+        width: 95vw;
+        align-items: start;
+        padding-left: 10px;
+    }
+
+    .total-expenses,
+    .money-left  {
+        min-width: auto;
+        margin: 10px 0px;
+    }
+}

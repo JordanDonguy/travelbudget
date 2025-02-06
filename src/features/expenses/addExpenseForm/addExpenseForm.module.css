@@ -57,3 +57,29 @@
         margin: 10px;
     }
 }
+
+@media only screen and (max-width: 410px) {
+    .expense-form {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .input{
+        margin: 0px 20px;
+    }
+
+    .name,
+    .amount,
+    .type,
+    .total-bloc,
+    .button {
+        margin: 10px 0px 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .input {
+        min-width: none;
+        width: 120px;
+    }
+}

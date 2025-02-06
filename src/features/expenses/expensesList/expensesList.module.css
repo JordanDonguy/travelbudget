@@ -7,7 +7,7 @@
 
 .expense {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 800px;
     border: 1px solid black;
@@ -17,7 +17,7 @@
 }
 
 .name, .type, .amount, .total {
-    width: 23%;
+    width: 25%;
     text-align: center;
 }
 
@@ -43,5 +43,6 @@
 @media only screen and (max-width: 700px) {
     .expense{
         font-size: 1rem;
+        padding: 5px 0px;
     }
 }

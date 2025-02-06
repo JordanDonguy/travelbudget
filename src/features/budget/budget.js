@@ -37,7 +37,7 @@ export default function Budget() {
                 step="1"
                 value={days}
                 onChange={handleDaysChange}
-                className={styles.input}
+                className={styles.input2}
                 />
             </label>
         </div>

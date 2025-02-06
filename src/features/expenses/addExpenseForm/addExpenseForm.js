@@ -57,7 +57,7 @@ export default function AddExpenseForm() {
     return (
         <div >
             <form onSubmit={handleSubmit} className={styles['expense-form']}>
-                <label>Description :
+                <label className={styles.name}>Description :
                     <input 
                     id="name"
                     type="text"
@@ -67,7 +67,7 @@ export default function AddExpenseForm() {
                     required
                     />
                 </label>
-                <label>Amount (€) :
+                <label className={styles.amount}>Amount (€) :
                     <input
                     id="amount"
                     type="number"
@@ -78,7 +78,7 @@ export default function AddExpenseForm() {
                     required
                     />
                 </label>
-                <label>Type :
+                <label className={styles.type}>Type :
                     <select id="type" value={type} onChange={handleTypeChange} className={styles.input}>
                         <option key="a" value="Daily">Daily</option>
                         <option key="b" value="One-time">One-time</option>

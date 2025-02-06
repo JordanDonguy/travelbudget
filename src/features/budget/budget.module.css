@@ -12,7 +12,8 @@
     min-width: 400px;
 }
 
-.input {
+.input,
+.input2 {
     text-align: center;
     font-size: 1.5rem;
     width:  120px;
@@ -26,5 +27,21 @@
     .budget{
         flex-direction: column;
         padding: 20px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .budget {
+        width: 95vw;
+        align-items: start;
+        padding-left: 10px;
+    }
+
+    .bloc {
+        min-width: auto;
+    }
+
+    .input2 {
+        width: 57px;
     }
 }

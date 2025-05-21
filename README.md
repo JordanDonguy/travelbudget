@@ -1,20 +1,65 @@
-# Travel Budget
+# 🌍 Travel Budget
 
-## Description du projet
-Une application web qui permet de calculer un budget pour un voyage en fonction de sa durée et des dépenses prévues.
+A handy web app that helps you calculate your **travel budget** based on your trip duration and expected expenses.  
 
-## Fonctionnement 
-Tout d'abord, il est nécessaire de rentrer le budget prévu dans la case "Budget" et la durée prévue du voyage en jours dans la case "Days".
-Ensuite, vous pouvez des dépenses grâce au formulaire prévu à cet effet juste en dessous. Pour ajouter une dépense, il sera demander de renseigner les informations suivantes :
-- Description : nom de la dépense (exemple: hôtel, restaurants, avion...)
-- Amount : le coût de la dépense
-- Type : définir si la dépense se reproduit tous les jours (daily) ou si c'est une dépense unique
-- Total : montant total de la dépense. Si type = one-time, alors le total sera égal à amount. Si type = daily, alors le total sera égal à amount multiplié par la durée du voyage (days)
-- Add expense : permet d'ajouter la dépense et de reset le formulaire
-La somme des dépenses est ensuite calculé et afficher dans "Total expenses", puis la case "Money left" affichera la quantité d'argent disponible après avoir soustrait le total des dépenses au budget prévu.
+I made this app to deepen my understanding of **React** and **Redux**, focusing on state management and dynamic UI updates.  
 
-## Technologies utilisées
-Ce site web a été réalisé grâce aux Framework React et Redux du langage de programmation JavaScript.
+Simply enter your total budget, trip duration, and planned expenses — the app does the rest!
 
-## Lien vers le site web
-Le site web est déployé à l'adresse suivante : [https://jordandonguy-travelbudget.netlify.app](https://jordandonguy-travelbudget.netlify.app)
+---
+
+## 🧠 Project Overview
+
+**Travel Budget** lets you plan your trip by tracking your total expenses and how much money you’ll have left, all in just a few clicks.
+
+Simply enter your total budget, trip duration, and planned expenses — the app does the rest!
+
+---
+
+## 🧾 How It Works
+
+1. 💰 **Enter your total budget** in the **"Budget"** field  
+2. 📅 **Enter the number of days** you’ll be traveling in the **"Days"** field  
+3. ➕ **Add expenses** using the form below. Each expense requires:
+
+   - **Description**: What the expense is for (e.g., hotel, flights, food)
+   - **Amount**: Cost of the expense
+   - **Type**: 
+     - `Daily`: Recurring every day of the trip  
+     - `One-time`: A single cost (like a plane ticket)
+   - **Total**: 
+     - Automatically calculated  
+     - If `one-time`: total = amount  
+     - If `daily`: total = amount × number of days
+
+4. ✅ Click **“Add Expense”** to save the entry and reset the form
+
+---
+
+## 📊 Budget Overview
+
+After entering your expenses:
+- 🧾 **Total Expenses**: Automatically calculated based on your entries  
+- 💸 **Money Left**: Displays how much of your budget remains after expenses
+
+---
+
+## 🧰 Technologies Used
+
+This app was built using:
+
+- ⚛️ **React**
+- 📦 **Redux**
+
+It's designed to be lightweight, responsive, and user-friendly for quick travel budgeting!
+
+---
+
+## 🔗 Live Demo
+
+Try the app here:  
+👉 [https://jordandonguy-travelbudget.netlify.app](https://jordandonguy-travelbudget.netlify.app)
+
+---
+
+Thanks for checking it out! 😊 Feel free to leave feedback or suggestions for new features.
